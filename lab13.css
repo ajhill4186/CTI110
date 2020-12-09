@@ -1,0 +1,129 @@
+body {
+	font-family: Gill Sans, sans-serif, Optima;
+}
+Legend {
+	background-color: #3399ff;
+	color: white;
+	font-family: Gill Sans, sans-serif, Optima;
+	padding: 5px;
+	border: 1px solid #6fb7ff;
+}
+ul {
+	list-style-type: none;
+	padding: 0;
+	
+}
+li+li {
+	padding-top: 10px;
+}
+Label {
+	font-family: Gill Sans, sans-serif, Optima;
+}
+.button {
+	background-color: #3399ff;
+	color: white;
+	margin-top: 10px;
+	border: 2px solid #285179;
+	font-size: 21px;
+}
+body {
+	background-color: #eee;
+	font-family: Gill Sans, sans-serif, Optima;
+}
+#container {
+	background-color: white;
+}
+.mainheader {
+	background-color: #666cff;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+.returnbutton {
+	text-align: center;
+	color: white;
+}
+a.buttonlink {
+	text-decoration: none;
+	color: white;
+}
+a.buttonlink:visited  {
+	color: white;
+}
+.links {
+	text-decoration: none;
+	color: #974ee6;
+}
+img {
+	border: 3px solid #00008b;
+	width: 200px;
+	height: auto;
+	margin-right: 25px;
+}
+h1 {
+	color: #0552ff;
+}
+h2 {
+	color: #243ead;
+}
+h3 {
+	color: #483d8b;
+}
+h4 {
+	text-align: center;
+}
+table, th, td {
+	border: 2px solid #1e1e1e;
+	padding: 10px;
+}
+thead {
+	background-color: #3399ff;
+	color: #fffaf0;
+}
+tbody {
+	color: #503aff;
+	
+}
+tfoot {
+	font-weight: bold;
+	font-size: 75%;
+	color: #b0bcc5;
+}
+caption {
+	font-family: Gill Sans, sans-serif, Optima;
+	font-weight: bold;
+	font-size: 150%;
+	color: #040f93;
+	border: 2px solid #040f93;
+}
+footer {
+	background-color: #666cff;
+	margin: 0px auto;
+	padding: 1px 0px;
+	color: white;
+}
+fieldset {
+	margin: 20px 0px;
+}
+table {
+	display: inline-table;
+	width: 300px;
+	vertical-align: top;
+	margin: 20px 30px;
+}
+aside {
+	float: left;
+}
+p {
+	line-height: 25px;
+}
+.userinfo {
+	margin-top: 40px;
+}
+.mainBody {
+	padding: 10px;
+	background-color: white;
+	margin: auto;
+	width: 60%;
+}
