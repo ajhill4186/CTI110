@@ -14,53 +14,53 @@
 </head>
 <body>
 	<div class = "mainBody">
-	<h1 class="mainheader">Calculate Cost of Tickets</h1>
+	<h1 class="mainheader rounded">Calculate Cost of Tickets</h1>
 	<form id="form" action="./lab13.php" method="POST">
 		<div>
-			<fieldset class="userinfo">
-				<legend>User Information</legend>
+			<fieldset class="userinfo rounded">
+				<legend class = "rounded">User Information</legend>
 				<ul>
 					<li>
 						<label for="name">Name: </label>
 					</li>
 					<li>
-						<input type="text" name="name" id="name" required>
+						<input type="text" name="name" class = "rounded" id="name" required>
 					</li>
 					<li>
 						<label for="phonenumber">Phone Number: </label>
 					</li>
 					<li>
-						<input type="tel" name="phonenumber" id="phonenumber" required>
+						<input type="tel" name="phonenumber" class = "rounded" id="phonenumber" required>
 					</li>
 				</ul>
 			</fieldset>
 		</div>
 		<div class="tickets">
-			<fieldset>
-				<legend>Tickets Needed</legend>
+			<fieldset class = "rounded">
+				<legend class = "rounded">Tickets Needed</legend>
 				<ul>
 					<li>
 						<label for="adultticket">How many adult Tickets? </label>
 					</li>
 					<li>
-						<input type="number" name="adultticket" id="adultticket" min="1" required value="1">
+						<input type="number" name="adultticket" class = "rounded" id="adultticket" min="1" required value="1">
 					</li>
 					<li>
 						<label for="childticket">How many child Tickets? </label>
 					</li>
 					<li>
-						<input type="number" name="childticket" id="childticket">
+						<input type="number" name="childticket" class = "rounded" id="childticket">
 					</li>
 				</ul>
 			</fieldset>
 		</div>
 		<div class="date">
-			<fieldset>
-				<legend>What Date Do You Want</legend>
+			<fieldset class = "rounded">
+				<legend class = "rounded">What Date Do You Want</legend>
 				<ul>	
 					<li>
 						<label>Date List</label>
-						<select name="date" id="date">
+						<select name="date" class = "rounded" id="date">
 							<option value="Mar 2020">Mar 2020</option>
 							<option value="Apr 2020">Apr 2020</option>
 							<option value="May 2020">May 2020</option>
@@ -70,11 +70,11 @@
 			</fieldset>
 		</div>
 		<div>
-			<button class="button" type="submit" form="form">Send Your Order</button>
+			<button class="button rounded" type="submit" form="form">Send Your Order</button>
 		</div>
 		<br>
 		<br>
-		<footer class="returnbutton">
+		<footer class="returnbutton rounded">
 			<p><a href="lab13_main.html" class="buttonlink">Return to Main Page</a></p>
 		</footer>
 	</form>
