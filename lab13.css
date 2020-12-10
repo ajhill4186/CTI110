@@ -76,6 +76,7 @@ img:hover {
 	z-index:999;
 	box-shadow: 0px 0px 100px 100px #666cff;
 	transform: scaleX(-1);
+	border-radius: 50%;
 }
 h1 {
 	color: #0552ff;
@@ -149,6 +150,6 @@ p {
 .rounded {
 	border-radius: 8px;
 }
-input:hover, select:hover, button:hover {
+input:hover, select:hover, button:hover, tr:hover {
 	box-shadow: 0px 0px 10px 10px #666cff;
 }
