@@ -1,93 +1,30 @@
-Legend {
-	background-color: #3399ff;
-	color: white;
-	font-family: Gill Sans, sans-serif, Optima;
-	padding: 5px;
-	border: 1px solid #6fb7ff;
-}
-ul {
-	list-style-type: none;
-	padding: 0;
-	
-}
-li+li {
-	padding-top: 10px;
-}
-Label {
-	font-family: Gill Sans, sans-serif, Optima;
-}
-.button {
-	background-color: #3399ff;
-	color: white;
-	margin-top: 10px;
-	border: 2px solid #285179;
-	font-size: 21px;
-}
-@keyframes colorChange {
-	0% { 
-		background-color: #eee;
-	}
-	50% {
-		background-color: #666cff;
-	}
-	100% { 
-		background-color: #eee;
-	}
+/*<<< ELEMENTS >>>*/
+aside {
+	float: left;
 }
 body {
 	background-color: #eee;
 	font-family: Gill Sans, sans-serif, Optima;
 	animation-name: colorChange;
-	animation-duration: 10s;
+	animation-duration: 100s;
 	animation-iteration-count: infinite;
 }
-#container {
-	background-color: white;
+caption {
+	font-family: Gill Sans, sans-serif, Optima;
+	font-weight: bold;
+	font-size: 150%;
+	color: #040f93;
+	border: 2px solid #040f93;
+	z-index: -1;
 }
-.mainheader {
+fieldset {
+	margin: 20px 0px;
+}
+footer {
 	background-color: #666cff;
+	margin: 0px auto;
+	padding: 1px 0px;
 	color: white;
-	text-align: center;
-	padding: 20px;
-	margin-bottom: 20px;
-}
-.returnbutton {
-	text-align: center;
-	color: white;
-}
-a.buttonlink {
-	text-decoration: none;
-	color: white;
-}
-a:hover {
-	color: white;
-	background-color: #666cff;
-	box-shadow: 0px 0px 10px 10px #666cff;
-}
-a.buttonlink:visited  {
-	color: white;
-}
-.links {
-	text-decoration: none;
-	color: #974ee6;
-}
-img {
-	border: 3px solid #00008b;
-	width: 200px;
-	height: auto;
-	margin-right: 25px;
-}
-img:hover {
-	position:relative;
-    top:-25px;
-    left:-35px;
-    width:300px;
-    height:auto;
-    display:block;
-	z-index:999;
-	box-shadow: 0px 0px 100px 100px #666cff;
-	transform: scaleX(-1);
-	border-radius: 50%;
 }
 h1 {
 	color: #0552ff;
@@ -101,53 +38,82 @@ h3 {
 h4 {
 	text-align: center;
 }
-table, th, td {
-	border: 2px solid #1e1e1e;
-	padding: 10px;
+img {
+	border: 3px solid #00008b;
+	width: 200px;
+	height: auto;
+	margin-right: 25px;
+	animation-name: heartbeat;
+	animation-duration: 50s;
+	animation-iteration-count: infinite;
 }
-thead {
-	background-color: #3399ff;
-	color: #fffaf0;
-}
-tbody {
-	color: #503aff;
-	
-}
-tfoot {
-	font-weight: bold;
-	font-size: 75%;
-	color: #b0bcc5;
-}
-caption {
+Label {
 	font-family: Gill Sans, sans-serif, Optima;
-	font-weight: bold;
-	font-size: 150%;
-	color: #040f93;
-	border: 2px solid #040f93;
 }
-footer {
-	background-color: #666cff;
-	margin: 0px auto;
-	padding: 1px 0px;
+Legend {
+	background-color: #3399ff;
 	color: white;
+	font-family: Gill Sans, sans-serif, Optima;
+	padding: 5px;
+	border: 1px solid #6fb7ff;
 }
-fieldset {
-	margin: 20px 0px;
+p {
+	line-height: 25px;
 }
 table {
 	display: inline-table;
 	width: 300px;
 	vertical-align: top;
 	margin: 20px 30px;
+	border: 2px solid #1e1e1e;
+	padding: 10px;
 }
-aside {
-	float: left;
+	th, td {
+		border: 2px solid #1e1e1e;
+		padding: 10px;
+	}
+	thead {
+		background-color: #3399ff;
+		color: #fffaf0;
+	}
+	tbody {
+		color: #503aff;
+		
+	}
+	tfoot {
+		font-weight: bold;
+		font-size: 75%;
+		color: #b0bcc5;
+	}
+ul {
+	list-style-type: none;
+	padding: 0;
+	
 }
-p {
-	line-height: 25px;
+	li+li {
+		padding-top: 10px;
+	}
+/*<<< CLASSES >>>*/
+a.buttonlink {
+	text-decoration: none;
+	color: white;
 }
-.userinfo {
-	margin-top: 40px;
+.button {
+	background-color: #3399ff;
+	color: white;
+	margin-top: 10px;
+	border: 2px solid #285179;
+	font-size: 21px;
+}
+.centered {
+	text-align: center;
+}
+.hoverShadow {
+	box-shadow: 10px 10px 5px 5px deepskyblue;
+}
+.links {
+	text-decoration: none;
+	color: #974ee6;
 }
 .mainBody {
 	padding: 10px;
@@ -155,11 +121,90 @@ p {
 	margin: auto;
 	width: 60%;
 }
-.centered {
+.mainheader {
+	background-color: #666cff;
+	color: white;
 	text-align: center;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+.returnbutton {
+	text-align: center;
+	color: white;
 }
 .rounded {
 	border-radius: 8px;
+}
+.userinfo {
+	margin-top: 40px;
+}
+/*<<< ANIMATIONS >>>*/
+@keyframes colorChange {
+	0% { 
+		background-color: #eee;
+	}
+	50% {
+		background-color: #666cff;
+	}
+	100% { 
+		background-color: #eee;
+	}
+}
+@keyframes heartbeat {
+	0% {
+		box-shadow: 0px 0px 1px 1px #666cff;
+	}
+	10% {
+		box-shadow: 0px 0px 5px 5px #666cff;
+	}
+	20% {
+		box-shadow: 0px 0px 10px 10px #666cff;
+	}
+	30% {
+		box-shadow: 0px 0px 15px 15px #666cff;
+	}
+	40% {
+		box-shadow: 0px 0px 20px 20px #666cff;
+	}
+	50% {
+		box-shadow: 0px 0px 25px 25px #666cff;
+	}
+	60% {
+		box-shadow: 0px 0px 20px 20px #666cff;
+	}
+	70% {
+		box-shadow: 0px 0px 15px 15px #666cff;
+	}
+	80% {
+		box-shadow: 0px 0px 10px 10px #666cff;
+	}
+	90% {
+		box-shadow: 0px 0px 5px 5px #666cff;
+	}
+	100% {
+		box-shadow: 0px 0px 1px 1px #666cff;
+	}
+}
+/*<<< ACTIONS >>>*/
+a.buttonlink:visited  {
+	color: white;
+}
+a:hover {
+	color: white;
+	background-color: #666cff;
+	box-shadow: 0px 0px 10px 10px #666cff;
+}
+img:hover {
+	position:relative;
+    top:-25px;
+    left:-35px;
+    width:300px;
+    height:auto;
+    display:block;
+	z-index:999;
+	box-shadow: 0px 0px 100px 100px #666cff;
+	transform: scaleX(-1);
+	border-radius: 50%;
 }
 input:hover, select:hover, button:hover, tr:hover {
 	box-shadow: 0px 0px 10px 10px #666cff;
