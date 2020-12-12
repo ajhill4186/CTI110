@@ -1,2 +1,0 @@
-# CTI110
-Lab for CTI 110
