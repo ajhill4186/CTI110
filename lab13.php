@@ -14,39 +14,66 @@
 </head>
 <body>
     
-    <?php
-// all this for a managers name ;)
-function getManagerName() {
+	<?php
+/*
+ * Connects to and queries the database for the manager's name.
+ *
+ * PARAM $placeholder (placeholder name to return in case db query fails)
+ * RETURNS String
+ * ERROR logs error to default logger and returns $placeholder 
+ */
+function getManagerName($placeholder) {
+	
+	// establish and confirm connection with database
     $connect = mysqli_connect("localhost", "cti110", "wtcc", "mydatabase");
-    $userQuery = "SELECT firstName, lastName FROM personnel WHERE jobTitle = 'Manager'";
-    $result = mysqli_query($connect, $userQuery);
-
     if(!$connect) {
-        die("ERROR: Cannot connect to database (".mysqli_connect_errno() . ", " . mysqli_connect_error() . ")");
+        error_log("Cannot connect to database (".mysqli_connect_errno() . ", " . mysqli_connect_error() . ")");
+		return $placeholder;
     }
+
+	// query database for manager's name and verify results are present
+	$result = mysqli_query($connect, "SELECT firstName, lastName FROM personnel WHERE jobTitle = 'Manager'");
     if (!$result) {
-        die("Could not successfully run query" . mysqli_error($connect) );
+        error_log("Could not successfully run query" . mysqli_error($connect) );
+		return $placeholder;
     }
+	
+	// fetch result array and close connection to database
     $row = mysqli_fetch_assoc($result);
     mysqli_close($connect);
+	
+	// return manager's name
     return $row['firstName'] . " " . $row['lastName'];
 }
 
+// retrieve form attributes from http request body and assign to variables for reusability
 $name = $_POST['name'];
 $phonenumber = $_POST['phonenumber'];
 $adultTicket = $_POST['adultticket'];
 $childTicket = $_POST['childticket'];
 $date = $_POST['date'];
 
-// calculates the cost of the concert ;)
+/*
+ * calculates the subtotal, tax and total and assigns them to globals of the same name.
+ *
+ * PARAM $adult (number of adult tickets)
+ * PARAM $child (number of child tickets)
+ */
 function calcCost($adult, $child) {
+	// create globals to use assign and use later
     global $subTotal, $tax, $totalCost;
+	
+	// perform calculations with algorithms designed to product specifications
     $subTotal = (35 * $adult) + (30 * $child);
     $tax = $subTotal * 0.07;
     $totalCost = $subTotal + $tax + (($adult + $child <= 5) ? 1.0 : 0.5) * ($adult + $child);
 }
 
-// prints the body of the reciept ;)
+/*
+ * creates the main body of the ticket receipt using globals previously defined
+ *
+ * RETURNS String
+ */
 function printReciept() {
     return "<div class = \"mainBody\"><h1 class=\"mainheader\">Concert Ticket Order Summary</h1>" . 
     "<p>Name: " . $GLOBALS['name'] . "</p>" . 
@@ -58,7 +85,7 @@ function printReciept() {
     "<p>Tax: $" . number_format($GLOBALS['tax'],2) . "</p>" . 
     "<p>Total cost: $" . number_format($GLOBALS['totalCost'],2) . "</p>" . 
     "<p>Please contact the manager if you have question:</p>" . 
-    "<p>" . getManagerName() . "</p>" . 
+    "<p>" . getManagerName("Admin") . "</p>" . 
     "<p>Thanks " . $GLOBALS['name'] . " for using this program!</p>";
 }
 calcCost($adultTicket, $childTicket);
