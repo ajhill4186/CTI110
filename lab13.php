@@ -69,17 +69,17 @@ if ($group <= 5) {
 // Calculates Total Cost - Aysatu Diallo
 $total = $subTotal + $tax + $fee;
 	
-echo "<p>Your name: {$GLOBALS['name']}</p>";
-echo "<p>Your phone number: {$GLOBALS['phoneNumber']}</p>";
-echo "<p>Number of adult tickets: {$GLOBALS['adultTicket']}</p>";
-echo "<p>Number of child tickets: {$GLOBALS['childTicket']}</p>";
-echo "<p>Date selected: {$GLOBALS['date']}</p>";
-echo "<p>Subtotal: $" . number_format($GLOBALS['subTotal'],2) . "</p>";
-echo "<p>Tax: $" . number_format($GLOBALS['tax'],2) . "</p>";
-echo "<p>Total cost: $" . number_format($GLOBALS['total'],2) . "</p>";
+echo "<p>Your name: {$name}</p>";
+echo "<p>Your phone number: {$phoneNumber}</p>";
+echo "<p>Number of adult tickets: {$adultTicket}</p>";
+echo "<p>Number of child tickets: {$childTicket}</p>";
+echo "<p>Date selected: {$date}</p>";
+echo "<p>Subtotal: $" . number_format($subTotal,2) . "</p>";
+echo "<p>Tax: $" . number_format($tax,2) . "</p>";
+echo "<p>Total cost: $" . number_format($total,2) . "</p>";
 echo "<p>Please contact the manager if you have questions: </p>";
 echo "<p>" . getManagerName("Admin") . "</p>";
-echo "<p>Thanks {$GLOBALS['name']} for using this program!</p>";
+echo "<p>Thanks {$name} for using this program!</p>";
 
 ?>
 <footer class="returnbutton rounded">
