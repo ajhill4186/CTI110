@@ -12,8 +12,8 @@
 	<title>L13 Concert Event</title>
 	<link rel="stylesheet" type="text/css" href="./lab13.css">
 </head>
-<body>
-<div class = "mainBody"><h1 class="mainheader">Concert Ticket Order Summary</h1>
+<body class = "rounded">
+<div class = "mainBody rounded"><h1 class="mainheader rounded">Concert Ticket Order Summary</h1>
     
 	<?php
 /*
@@ -82,7 +82,7 @@ echo "<p>" . getManagerName("Admin") . "</p>";
 echo "<p>Thanks {$GLOBALS['name']} for using this program!</p>";
 
 ?>
-<footer class="returnbutton">
+<footer class="returnbutton rounded">
     <p><a href="lab13_main.html" class="buttonlink">Return to Main Page</a></p>
 </footer>
 </div>
